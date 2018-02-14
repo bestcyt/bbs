@@ -17,18 +17,24 @@ class ImageUploadHandle
     protected $allow_ext = ["png", "jpg", "gif", 'jpeg'];
 
     public function save($file, $folder, $file_prefix,$max_width = false){
+
         $folder_name = "uploads/images/$folder/" . date('Ym',time()) . '/' . date('d',time()) . '/';
 
+        //图片要存放的位置
         $upload_path = public_path() . '/' . $folder_name ;
 
+        //图片后缀
         $extension = strtolower($file->getClientOriginalExtension()) ? :'png';
 
+        //新的图片名
         $filename = $file_prefix . '_' .time().'_'.str_random(10) . '.' . $extension;
 
+        //检测文件后缀名是否合法
         if (!in_array($extension,$this->allow_ext)){
             return false;
         }
 
+        //将图片移动到我们的目标存储路径中
         $file->move($upload_path, $filename);
 
         if ($max_width && $extension != 'gif') {
