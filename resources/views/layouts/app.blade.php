@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 
     @include('layouts._footer')
 </div>
-
+@yield('js')
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
