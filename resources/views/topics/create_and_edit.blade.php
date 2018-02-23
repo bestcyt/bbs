@@ -2,7 +2,8 @@
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/simditor/simditor.css') }}">
 @endsection
-
+@section('title', $topic->title)
+@section('description', $topic->excerpt)
 @section('content')
 
     <div class="container">
