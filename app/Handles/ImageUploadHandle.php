@@ -23,6 +23,9 @@ class ImageUploadHandle
         //图片要存放的位置
         $upload_path = public_path() . '/' . $folder_name ;
 
+        if (!file_exists($upload_path)){
+            mkdir($upload_path,0777,true);
+        }
         //图片后缀
         $extension = strtolower($file->getClientOriginalExtension()) ? :'png';
 

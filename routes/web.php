@@ -30,6 +30,8 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
 Route::resource('users','UsersController',['only' => ['show', 'update', 'edit']]);
