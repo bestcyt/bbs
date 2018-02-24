@@ -35,7 +35,7 @@ class ReplyRequest extends Request
     public function messages()
     {
         return [
-            // Validation messages
+            'content' => 'required|min:2'
         ];
     }
 }
