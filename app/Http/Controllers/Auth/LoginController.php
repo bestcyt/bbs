@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -35,5 +36,14 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function authenticate()
+    {
+        if (Auth::attempt(['email' => request()->input('email'), 'password' => request()->input('password')])) {
+            // 认证通过...
+            dd('asdf');
+            return redirect()->intended('dashboard');
+        }
     }
 }

@@ -14,6 +14,9 @@
 
 //Route::get('/', 'PagesController@root')->name('root');
 Route::get('/', 'PagesController@root')->name('root');
+Route::get('phpinfo', function () {
+    return phpinfo();
+});
 
 //Auth
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
