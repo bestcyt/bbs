@@ -41,4 +41,16 @@ return [
         'key'   => env('BAIDU_TRANSLATE_KEY'),
     ],
 
+    'github' => [
+        'client_id' => 'c6aa1e0edf91dba4cf46',
+        'client_secret' => '86a39dd6637348840b931e3f4f6b3550655b553b',
+        'redirect' => 'http://local.bbs.com/login/github/callback',
+    ],
+
+    'qq' => [
+        'client_id' => '101429007',
+        'client_secret' => 'b2d1ab4933884d2843fe2c23a2ec5430',
+        'redirect' => 'http://local.bbs.com',
+    ],
+
 ];
