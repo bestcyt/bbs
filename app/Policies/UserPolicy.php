@@ -21,7 +21,7 @@ class UserPolicy
 
     public function update(User $currentUser, User $user)
     {
-        dd('asdf');
+        
         return $currentUser->id === $user->id;
     }
 }

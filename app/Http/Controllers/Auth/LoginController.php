@@ -44,7 +44,6 @@ class LoginController extends Controller
     {
         if (Auth::attempt(['email' => request()->input('email'), 'password' => request()->input('password')])) {
             // 认证通过...
-            dd('asdf');
             return redirect()->intended('dashboard');
         }
     }
