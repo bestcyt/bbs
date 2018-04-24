@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/image','ImageReController@index');
+Route::get('/swiper','ImageReController@swiper');
 
 //Route::get('/', 'PagesController@root')->name('root');
 Route::get('/', 'TopicsController@index')->name('root');

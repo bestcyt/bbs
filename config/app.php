@@ -179,6 +179,9 @@ return [
         Mews\Purifier\PurifierServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+
+        //image
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -230,6 +233,9 @@ return [
         'Purifier' => Mews\Purifier\Facades\Purifier::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
+        //image
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];
